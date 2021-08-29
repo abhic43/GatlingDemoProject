@@ -1,0 +1,10 @@
+{
+  "simulation": "myGatlingProject._03_Login",
+  "simulationId": "-03-login",
+  "start": 1630172012836,
+  "description": "rem",
+  "scenarios": ["RecordedSimulation"],
+  "assertions": [
+
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "simulation": "myGatlingProject.mySecondScript",
+  "simulationId": "mysecondscript",
+  "start": 1630166672094,
+  "description": "sample",
+  "scenarios": ["RecordedSimulation"],
+  "assertions": [
+
+  ]
+}
