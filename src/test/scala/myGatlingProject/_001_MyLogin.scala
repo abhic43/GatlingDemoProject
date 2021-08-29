@@ -265,6 +265,8 @@ class _001_MyLogin extends Simulation{
     "x-referrer" -> "https://www.linio.cl/account/login",
     "x-xsrf-token" -> "2dad4eb5c317b2a73ee57a.NYIwRNhRAQnaPpURGkihTIvreI-BG7FLn4ZpumDByqw.b_V3HKghVHOSWs0kfCbRAtuzQe7ZcMcx0fUuzAmTifMG7Wkg7idvap583A")
 
+
+  val csvFeederUser = csv("src/test/resources/Data/userLoginDetails.csv").eager.queue// CSV Contains : Email,FirstName,LastName,RUT with a  comma separator
   val uri01 = "https://bam-cell.nr-data.net"
   val uri02 = "https://nova.collect.igodigital.com/c2/520000417/track_page_view"
   val uri03 = "https://s3.amazonaws.com/fms-live"
@@ -1172,14 +1174,15 @@ class _001_MyLogin extends Simulation{
           .get(uri19)
           .headers(headers_3)))
     .pause(1)
+    .feed(csvFeederUser)
     .exec(http("request_321")
       .get(uri16 + "/tr/?id=543671342917527&ev=SubscribedButtonClick&dl=https%3A%2F%2Fwww.linio.cl%2Faccount%2Flogin&rl=https%3A%2F%2Fwww.linio.cl%2F&if=false&ts=1630205547359&cd[buttonFeatures]=%7B%22classList%22%3A%22btn%20btn-security%20col-xs-12%22%2C%22destination%22%3A%22https%3A%2F%2Fwww.linio.cl%2Faccount%2Flogin_check%22%2C%22id%22%3A%22%22%2C%22imageUrl%22%3A%22%22%2C%22innerText%22%3A%22%20Iniciar%20sesi%C3%B3n%20segura%22%2C%22numChildButtons%22%3A0%2C%22tag%22%3A%22button%22%2C%22name%22%3A%22%22%2C%22value%22%3A%22%22%7D&cd[buttonText]=%20Iniciar%20sesi%C3%B3n%20segura&cd[formFeatures]=%5B%7B%22id%22%3A%22login_form_email%22%2C%22name%22%3A%22login_form%5Bemail%5D%22%2C%22tag%22%3A%22input%22%2C%22placeholder%22%3A%22Ejemplo%3A%20jgonzalesc89%40gmail.com%22%2C%22inputType%22%3A%22email%22%7D%2C%7B%22id%22%3A%22login_form_password%22%2C%22name%22%3A%22login_form%5Bpassword%5D%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22password%22%7D%2C%7B%22id%22%3A%22login_form__token%22%2C%22name%22%3A%22login_form%5B_token%5D%22%2C%22tag%22%3A%22input%22%2C%22inputType%22%3A%22hidden%22%7D%5D&cd[pageFeatures]=%7B%22title%22%3A%22Compra%20Online%20los%20mejores%20productos%20al%20mejor%20precio%20%7C%20Linio%20Chile%22%7D&cd[parameters]=%5B%5D&sw=1366&sh=700&udff[em]=146d4b3a490e92809ca35683e9b3b0071d7cad91518fbd1d166af1c8e52460d2&v=2.9.45&r=stable&a=seg&ec=3&o=2078&fbp=fb.1.1630205516319.679381069&it=1630205522698&coo=false&dpo=LDU&dpoco=0&dpost=0&es=automatic&tm=3&exp=p0&rqm=GET")
       .headers(headers_3)
       .resources(http("Login_Check")
         .post(uri10 + "/account/login_check")
         .headers(headers_322)
-        .formParam("login_form[email]", "abhic2534@gmail.com")
-        .formParam("login_form[password]", "Qwerty@123")
+        .formParam("login_form[email]", "${email}")
+        .formParam("login_form[password]", "${password}")
         .formParam("login_form[_token]", "4264b224a77b1aad848651e871f8bddf.f4QZcvx-dPYNz0xz0Ly2Xy0LUqxxZK4Ppy2RLJ0QrZY.L-1vEJVOQYc4jDk5ivf9L2lJDeQcSdxtyx28Zvxy_c4csEsquzUWp1WmJw"),
         http("request_323")
           .get(uri09 + "/css/alice-home-d5088827a7.css")
