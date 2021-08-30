@@ -12,13 +12,8 @@ Prerequisites :  IntelliJ and JDK must be installed for running this project.
 * Right click on Project name and check for Module Settings.
 * Goto Platform SDK and check if File path is present : C:\Program Files\Java\jdk1.8.0_261.  If not add the JDK path.
 * Check for Scala Global Libraries : scala-sdk-2.13.6. If not present, click + button to download library.
-* Now you have everything installed. 
-* Goto path src/test/scala and right click on Engine and select run 'Engine' or from terminal write ""
-Choose a simulation number:
-     [0] myGatlingProject._001_MyLogin
-     [1] myGatlingProject._002_Registration
-* Choose Simulation you want to run.
-* Select run description or hit enter.
+* Now you have everything installed. Build you project before running.
+* Goto terminal and run mvn gatling:test -Dgatling.simulationClass=myGatlingProject._002_Registration 
 * Your project should be running mode.
 * To check the output file goto *\GatlingDemoProject\target\gatling\ 
 * and open the the simulation file you ran just now. Name can be seen from the console.
