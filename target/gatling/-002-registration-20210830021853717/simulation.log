@@ -1,0 +1,31 @@
+RUN	myGatlingProject._002_Registration	-002-registration	1630289933717	 	3.6.1
+REQUEST		LaunchHomePage	1630289935042	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935041	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935042	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935040	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935043	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935043	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935040	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935040	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935042	1630289935151	KO	j.n.UnknownHostException: www.linio.cl
+REQUEST		LaunchHomePage	1630289935041	1630289935152	KO	j.n.UnknownHostException: www.linio.cl
+USER	RecordedSimulation	START	1630289934990
+USER	RecordedSimulation	START	1630289934989
+USER	RecordedSimulation	START	1630289934998
+USER	RecordedSimulation	START	1630289934984
+USER	RecordedSimulation	START	1630289934989
+USER	RecordedSimulation	START	1630289934992
+USER	RecordedSimulation	START	1630289934989
+USER	RecordedSimulation	START	1630289934983
+USER	RecordedSimulation	START	1630289934989
+USER	RecordedSimulation	START	1630289934991
+USER	RecordedSimulation	END	1630289937182
+USER	RecordedSimulation	END	1630289937182
+USER	RecordedSimulation	END	1630289937182
+USER	RecordedSimulation	END	1630289937182
+USER	RecordedSimulation	END	1630289937182
+USER	RecordedSimulation	END	1630289937183
+USER	RecordedSimulation	END	1630289937183
+USER	RecordedSimulation	END	1630289937184
+USER	RecordedSimulation	END	1630289937184
+USER	RecordedSimulation	END	1630289937184

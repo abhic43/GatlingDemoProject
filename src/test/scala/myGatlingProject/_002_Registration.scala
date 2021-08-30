@@ -1961,5 +1961,5 @@ class _002_Registration extends Simulation{
 //    setUp(
 //    scn.inject(rampUsers(10).during(10.seconds)),
 //  ).protocols(httpProtocol)
-      setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol)
+      setUp(scn.inject(atOnceUsers(10))).protocols(httpProtocol)
 }

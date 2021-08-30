@@ -2,6 +2,7 @@
 <project version="4">
   <component name="JavadocGenerationManager">
     <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/../../.." />
+    <option name="OPTION_SCOPE" value="public" />
     <option name="OPTION_DOCUMENT_TAG_USE" value="true" />
     <option name="OPTION_DOCUMENT_TAG_AUTHOR" value="true" />
     <option name="OPTION_DOCUMENT_TAG_VERSION" value="true" />
@@ -16,7 +17,7 @@
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
   <component name="ScaladocSettings">
-    <option name="outputDir" value="C:\Users\abhinach\Downloads\Abhinav" />
+    <option name="outputDir" value="C:\Users\abhinach\Downloads\Abhinav\Gatling" />
     <option name="additionalFlags" value="" />
     <option name="maxHeapSize" value="" />
     <option name="docTitle" value="GatlingDemoProject documentation" />
